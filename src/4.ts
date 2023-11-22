@@ -36,7 +36,7 @@ abstract class House {
 
 class MyHouse extends House {
      openDoor(key: Key): void {
-    if (key.getSignature() === this.key.getSignature()) {
+    if (key.getSignature() !== this.key.getSignature()) {
       console.log("Sorry, the key is not valid");
       return;
     }
